@@ -18,7 +18,7 @@ public class pruebitas {
 					//Duration d1 = Duration.between(horaEntrada, horaSalida);
 					System.out.println(ChronoUnit.MINUTES.between(horaEntrada, horaSalida));
 					System.out.println("Prueba de cambios GIT");
-				
+					System.out.println("Prueba cambios GIT NUEVO");
 			}
 
 		}
