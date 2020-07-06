@@ -1,6 +1,9 @@
 package Parqueadero;
 
 import java.time.Duration;
+/**
+ * pruebas 05/07/2020
+ */
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
