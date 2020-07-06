@@ -170,7 +170,7 @@ public class Aparcamiento {
 
 	public void generaInformePagosResidentes() {
 		try {
-			FileWriter archivo = new FileWriter("InformeMesActual.txt");
+			FileWriter archivo = new FileWriter("InformeMesActual_Residentes.txt");
 			BufferedWriter contenido = new BufferedWriter(archivo);
 			contenido.write("Matricula          ");
 			contenido.write("Tiempo Acumulado(Min)        ");
@@ -181,6 +181,27 @@ public class Aparcamiento {
 				contenido.write(vehRes.matricula + "                ");
 				contenido.write(vehRes.tiempoAcumulado + "                              ");
 				contenido.write(String.valueOf(vehRes.pagoMes()));
+			}
+			contenido.close();
+			archivo.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void generaInformeOficiales() {
+		try {
+			FileWriter archivo = new FileWriter("InformeMesActual_Oficiales.txt");
+			BufferedWriter contenido = new BufferedWriter(archivo);
+			contenido.write("Matricula          ");
+			contenido.write("Tiempo         ");			
+
+			for (VehiculoOficial vehOf : vehOficiales) {
+				contenido.newLine();
+				contenido.write(vehOf.matricula + "                ");
+				//contenido.write(vehOf. + "                              ");
+				
 			}
 			contenido.close();
 			archivo.close();
